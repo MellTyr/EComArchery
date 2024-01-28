@@ -1,0 +1,30 @@
+<mat-form-field>
+  <mat-label>Выберите тип аттрибута</mat-label>
+  <mat-select (selectionChange)="selectedTypeChanged($event.value)">
+    <mat-option value="1">Текстовый</mat-option>
+    <mat-option value="2">Список</mat-option>
+  </mat-select>
+</mat-form-field>
+@if (selectedAttrType=== 1) 
+{<form [formGroup]="applyForm" (submit)="createTextAttr()">
+  <label for="name">Наименование характеристики: </label>
+  <input id="name" type="text" formControlName="name">
+  <button type="submit" class="primary">Создать</button>
+</form>
+}
+@else if (selectedAttrType===2) 
+{
+  <app-select-attribute-create/>
+}
+
+
+<app-text-attribute
+    *ngFor="let textAttr of textAttrList"
+  [productTextAttribute]="textAttr">
+</app-text-attribute>
+
+<p>Аттрибуты списка</p>
+<app-select-attribute-view
+*ngFor="let cAttr of choiseAttrList"
+[productChoiseAttribute]="cAttr">
+</app-select-attribute-view>

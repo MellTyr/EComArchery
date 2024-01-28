@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/alberttomilin/Projects/EComApi/EComApi/wwwroot/3rdpartylicenses.txt",
+      "PackagePath": "staticwebassets/3rdpartylicenses.txt"
+    },
+    {
+      "Id": "/Users/alberttomilin/Projects/EComApi/EComApi/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/alberttomilin/Projects/EComApi/EComApi/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/alberttomilin/Projects/EComApi/EComApi/wwwroot/main.5ff11ffe8a2d4020.js",
+      "PackagePath": "staticwebassets/main.5ff11ffe8a2d4020.js"
+    },
+    {
+      "Id": "/Users/alberttomilin/Projects/EComApi/EComApi/wwwroot/polyfills.e4039fc73d623221.js",
+      "PackagePath": "staticwebassets/polyfills.e4039fc73d623221.js"
+    },
+    {
+      "Id": "/Users/alberttomilin/Projects/EComApi/EComApi/wwwroot/runtime.796b84e18628e95e.js",
+      "PackagePath": "staticwebassets/runtime.796b84e18628e95e.js"
+    },
+    {
+      "Id": "/Users/alberttomilin/Projects/EComApi/EComApi/wwwroot/styles.6507e0fc35322572.css",
+      "PackagePath": "staticwebassets/styles.6507e0fc35322572.css"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.EComApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.build.EComApi.props",
+      "PackagePath": "build\\EComApi.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildMultiTargeting.EComApi.props",
+      "PackagePath": "buildMultiTargeting\\EComApi.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildTransitive.EComApi.props",
+      "PackagePath": "buildTransitive\\EComApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

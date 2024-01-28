@@ -1,0 +1,10 @@
+@for (product of allProducts; track $index) {
+    <div>
+        Name: {{product.name}}
+    </div>
+    @for (textAttribute of product.textAttributeVMs; track $index) {
+        <div>
+            {{textAttribute.name}}: {{textAttribute.value.text}}
+        </div>
+    }
+}

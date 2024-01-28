@@ -1,0 +1,30 @@
+<form [formGroup]="productForm" (submit)="createProduct()">
+    <mat-form-field appearance="fill">
+        <input matInput formControlName="productName" placeholder="Наименование продукта" />
+    </mat-form-field>
+    <button mat-button class="primary" (click)="addTextAttribute()" type="button">Добавить текстовый аттрибут</button>
+    <div formArrayName="textAttrubutes">
+        <div *ngFor="let textAttr of getTextAttributeControls.controls; let i = index">
+            <div [formGroupName]="i" style="display: flex;">
+                    <mat-form-field>
+                        <mat-label>Text attr</mat-label>
+                        <mat-select formControlName="id">
+                            @for(textAttr of availableTextAttributes; track textAttr.name)
+                            {
+                            <mat-option  [value]="textAttr.id">{{textAttr.name}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="value" placeholder="Text attr value">
+                </mat-form-field>
+                <button type="button"
+                (click)="deleteTextAttribute(i)"
+                 mat-mini-fab style="display: inline-block;" color="primary" aria-label="Example icon button with a delete icon">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="primary">Сохранить</button>
+</form>

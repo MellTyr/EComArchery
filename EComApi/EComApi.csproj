@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.10" />
+    <PackageReference Include="AutoMapper.Extensions.EnumMapping" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Database\" />
+    <None Remove="Database\Models\" />
+    <None Remove="Database\Models\Enums\" />
+    <None Remove="Database\Models\PossibleAttrTypes\" />
+    <None Remove="Database\Models\PossibleAttrTypes\PossibleValues\" />
+    <None Remove="Database\Models\ProductValues\" />
+    <None Remove="ViewModels\" />
+    <None Remove="ViewModels\AttributeModels\" />
+    <None Remove="Mappings\" />
+    <None Remove="Services\" />
+    <None Remove="Services\AttributeManager\" />
+    <None Remove="Services\ProductManager\" />
+    <None Remove="ViewModels\AttributeModels\ChoiseAttr\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Database\Models\" />
+    <Folder Include="Database\Models\Enums\" />
+    <Folder Include="Database\Models\PossibleAttrTypes\" />
+    <Folder Include="Database\Models\PossibleAttrTypes\PossibleValues\" />
+    <Folder Include="Database\Models\ProductValues\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\AttributeModels\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\AttributeManager\" />
+    <Folder Include="Services\ProductManager\" />
+    <Folder Include="ViewModels\AttributeModels\ChoiseAttr\" />
+  </ItemGroup>
+</Project>
